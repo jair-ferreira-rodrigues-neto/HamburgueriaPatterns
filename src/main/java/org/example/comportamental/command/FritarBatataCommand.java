@@ -1,4 +1,4 @@
-package org.example.comportamental;
+package org.example.comportamental.command;
 
 public class FritarBatataCommand implements CozinhaCommand {
     private CozinhaReceiver cozinha;

@@ -1,4 +1,4 @@
-package org.example.estrutural;
+package org.example.estrutural.decorator;
 
 import org.example.criacional.factorymethod.Lanche;
 

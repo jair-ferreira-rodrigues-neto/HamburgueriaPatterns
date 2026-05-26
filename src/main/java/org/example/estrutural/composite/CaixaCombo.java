@@ -1,4 +1,4 @@
-package org.example.estrutural;
+package org.example.estrutural.composite;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package org.example.comportamental;
+package org.example.comportamental.iterator;
 
 import java.util.List;
 

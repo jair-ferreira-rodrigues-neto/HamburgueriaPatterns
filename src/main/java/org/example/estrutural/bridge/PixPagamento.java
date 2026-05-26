@@ -1,4 +1,4 @@
-package org.example.estrutural;
+package org.example.estrutural.bridge;
 
 public class PixPagamento extends Pagamento {
     public PixPagamento(ProcessadorBridge processador) {

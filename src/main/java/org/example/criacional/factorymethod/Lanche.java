@@ -1,4 +1,4 @@
-package org.example.criacional;
+package org.example.criacional.factorymethod;
 
 public interface Lanche {
     String getDescricao();

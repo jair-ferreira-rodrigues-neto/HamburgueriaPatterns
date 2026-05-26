@@ -1,4 +1,4 @@
-package org.example.estrutural;
+package org.example.estrutural.composite;
 
 public interface ItemComercial {
     double getValor();

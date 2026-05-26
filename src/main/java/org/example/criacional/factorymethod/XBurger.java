@@ -1,4 +1,4 @@
-package org.example.criacional;
+package org.example.criacional.factorymethod;
 
 public class XBurger implements Lanche {
     @Override

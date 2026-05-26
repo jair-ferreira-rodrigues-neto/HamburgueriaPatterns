@@ -1,4 +1,6 @@
-package org.example.criacional;
+package org.example.criacional.builder;
+
+import org.example.criacional.factorymethod.Lanche;
 
 public class PedidoBuilder {
     private Lanche lanche;

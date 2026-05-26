@@ -1,4 +1,4 @@
-package org.example.estrutural;
+package org.example.estrutural.composite;
 
 public class ProdutoAvulso implements ItemComercial {
     private String nome;

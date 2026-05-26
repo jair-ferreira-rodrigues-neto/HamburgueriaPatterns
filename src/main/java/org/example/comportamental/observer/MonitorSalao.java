@@ -1,4 +1,4 @@
-package org.example.comportamental;
+package org.example.comportamental.observer;
 
 public class MonitorSalao implements PedidoObserver {
     private int ultimaSenhaChamada;

@@ -1,4 +1,4 @@
-package org.example.estrutural;
+package org.example.estrutural.bridge;
 
 public abstract class Pagamento {
     protected ProcessadorBridge processador;

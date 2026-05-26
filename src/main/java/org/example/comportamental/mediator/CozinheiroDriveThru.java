@@ -1,4 +1,4 @@
-package org.example.comportamental;
+package org.example.comportamental.mediator;
 
 public class CozinheiroDriveThru extends Funcionario {
     public CozinheiroDriveThru(DriveThruMediator mediator) {

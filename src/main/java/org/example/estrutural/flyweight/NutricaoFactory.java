@@ -1,4 +1,4 @@
-package org.example.estrutural;
+package org.example.estrutural.flyweight;
 
 import java.util.HashMap;
 import java.util.Map;

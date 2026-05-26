@@ -1,4 +1,4 @@
-package org.example.estrutural;
+package org.example.estrutural.bridge;
 
 public class CieloProcessador implements ProcessadorBridge {
     @Override

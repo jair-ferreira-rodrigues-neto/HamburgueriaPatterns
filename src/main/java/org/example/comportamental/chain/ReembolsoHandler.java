@@ -1,4 +1,4 @@
-package org.example.comportamental;
+package org.example.comportamental.chain;
 
 public abstract class ReembolsoHandler {
     protected ReembolsoHandler proximo;

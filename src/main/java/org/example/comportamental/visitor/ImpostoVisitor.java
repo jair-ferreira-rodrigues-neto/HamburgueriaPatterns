@@ -1,4 +1,4 @@
-package org.example.comportamental;
+package org.example.comportamental.visitor;
 
 public interface ImpostoVisitor {
     double visitar(ComidaItem comida);

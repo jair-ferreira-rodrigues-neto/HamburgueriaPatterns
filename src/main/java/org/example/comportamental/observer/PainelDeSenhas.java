@@ -1,4 +1,6 @@
-package org.example.comportamental;
+package org.example.comportamental.observer;
+
+import org.example.comportamental.state.OrdemDePreparo;
 
 import java.util.ArrayList;
 import java.util.List;

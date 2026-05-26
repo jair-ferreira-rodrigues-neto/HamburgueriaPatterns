@@ -1,4 +1,4 @@
-package org.example.comportamental;
+package org.example.comportamental.templatemethod;
 
 public class PreparoCarneTradicional extends PreparoTemplate {
     @Override

@@ -1,4 +1,4 @@
-package org.example.criacional;
+package org.example.criacional.abstractfactory;
 
 public interface ComboFactory {
     LanchePrato criarLanche();

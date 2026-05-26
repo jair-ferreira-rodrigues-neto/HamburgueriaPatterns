@@ -1,4 +1,4 @@
-package org.example.comportamental;
+package org.example.comportamental.command;
 
 import java.util.ArrayList;
 import java.util.List;

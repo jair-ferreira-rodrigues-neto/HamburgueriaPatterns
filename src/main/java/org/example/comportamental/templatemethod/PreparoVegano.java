@@ -1,4 +1,4 @@
-package org.example.comportamental;
+package org.example.comportamental.templatemethod;
 
 public class PreparoVegano extends PreparoTemplate {
     @Override

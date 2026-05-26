@@ -1,4 +1,4 @@
-package org.example.criacional;
+package org.example.criacional.factorymethod;
 
 public class XSalada implements Lanche {
     @Override

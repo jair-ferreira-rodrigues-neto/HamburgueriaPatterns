@@ -1,4 +1,4 @@
-package org.example.comportamental;
+package org.example.comportamental.mediator;
 
 public abstract class Funcionario {
     protected DriveThruMediator mediator;

@@ -1,4 +1,4 @@
-package org.example.criacional;
+package org.example.criacional.abstractfactory;
 
 public class HamburguerVegetariano implements LanchePrato {
     @Override

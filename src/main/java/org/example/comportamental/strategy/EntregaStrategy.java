@@ -1,4 +1,4 @@
-package org.example.comportamental;
+package org.example.comportamental.strategy;
 
 public interface EntregaStrategy {
     double calcularTaxa(double valorPedido);

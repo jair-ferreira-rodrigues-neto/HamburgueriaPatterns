@@ -1,4 +1,4 @@
-package org.example.estrutural;
+package org.example.estrutural.flyweight;
 
 public class TabelaNutricional {
     private String calorias;

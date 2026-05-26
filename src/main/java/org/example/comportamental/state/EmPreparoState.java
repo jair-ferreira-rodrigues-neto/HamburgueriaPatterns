@@ -1,4 +1,4 @@
-package org.example.comportamental;
+package org.example.comportamental.state;
 
 public class EmPreparoState implements PedidoState {
     @Override

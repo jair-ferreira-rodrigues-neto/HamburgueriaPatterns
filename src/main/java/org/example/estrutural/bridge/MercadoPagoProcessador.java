@@ -1,4 +1,4 @@
-package org.example.estrutural;
+package org.example.estrutural.bridge;
 
 public class MercadoPagoProcessador implements ProcessadorBridge {
     @Override

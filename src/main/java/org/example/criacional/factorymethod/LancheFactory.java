@@ -1,4 +1,4 @@
-package org.example.criacional;
+package org.example.criacional.factorymethod;
 
 public class LancheFactory {
     public Lanche criarLanche(String tipo) {

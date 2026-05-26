@@ -1,4 +1,6 @@
-package org.example.criacional;
+package org.example.criacional.singleton;
+
+import org.example.criacional.builder.Pedido;
 
 import java.util.ArrayList;
 import java.util.List;

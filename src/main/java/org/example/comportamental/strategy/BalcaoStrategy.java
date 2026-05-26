@@ -1,4 +1,4 @@
-package org.example.comportamental;
+package org.example.comportamental.strategy;
 
 public class BalcaoStrategy implements EntregaStrategy {
     @Override
