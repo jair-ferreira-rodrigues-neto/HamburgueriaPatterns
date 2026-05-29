@@ -7,6 +7,7 @@ import org.example.criacional.builder.Pedido;
 import org.example.criacional.builder.PedidoBuilder;
 import org.example.criacional.factorymethod.Lanche;
 import org.example.criacional.factorymethod.LancheFactory;
+import org.example.criacional.prototype.CupomSorteio;
 import org.example.criacional.singleton.FilaDePedidos;
 import org.junit.jupiter.api.Test;
 
@@ -45,5 +46,20 @@ public class CriacionalTest {
         ComboFactory saudavel = new ComboSaudavelFactory();
         assertEquals("Hambúrguer de Soja", saudavel.criarLanche().getNomePrato());
         assertEquals("Suco de Laranja", saudavel.criarBebida().getNomeBebida());
+    }
+
+    @Test
+    public void testClonagemCupomSorteio() {
+        CupomSorteio cupomBase = new CupomSorteio("Sorteio de 1 Ano de Hamburguer.");
+
+        CupomSorteio cupomCliente1 = cupomBase.clone();
+        cupomCliente1.setCpfCliente("111.222.333-44");
+
+        CupomSorteio cupomCliente2 = cupomBase.clone();
+        cupomCliente2.setCpfCliente("555.666.777-88");
+
+        assertNotSame(cupomBase, cupomCliente1);
+        assertEquals("Regras: Sorteio de 1 Ano de Hamburguer. | Participante: 111.222.333-44", cupomCliente1.getDetalhes());
+        assertEquals("Regras: Sorteio de 1 Ano de Hamburguer. | Participante: 555.666.777-88", cupomCliente2.getDetalhes());
     }
 }

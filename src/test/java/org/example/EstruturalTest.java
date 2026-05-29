@@ -9,6 +9,11 @@ import org.example.estrutural.composite.ProdutoAvulso;
 import org.example.estrutural.decorator.AdicionalBacon;
 import org.example.estrutural.flyweight.NutricaoFactory;
 import org.example.estrutural.flyweight.TabelaNutricional;
+import org.example.estrutural.adapter.*;
+import org.example.estrutural.proxy.*;
+import org.example.criacional.singleton.FilaDePedidos;
+import org.example.criacional.builder.Pedido;
+import org.example.estrutural.facade.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -51,5 +56,38 @@ public class EstruturalTest {
         ProcessadorBridge mercadoPago = new MercadoPagoProcessador();
         Pagamento pix = new PixPagamento(mercadoPago);
         assertEquals("Pago no PIX: 30.0", pix.realizarPagamento(30.0));
+    }
+
+    @Test
+    public void testAdapterDeliveryExterno() {
+        FilaDePedidos.getInstancia().getPedidos().clear();
+
+        ServicoDeliveryExterno apiAntiga = new ServicoDeliveryExterno();
+        ImportadorPedido adaptador = new DeliveryAdapter(apiAntiga);
+
+        adaptador.importarPedidoExterno();
+
+        assertEquals(1, FilaDePedidos.getInstancia().getPedidos().size());
+        Pedido pedidoImportado = FilaDePedidos.getInstancia().getPedidos().get(0);
+
+        assertEquals("X-Burger Tradicional", pedidoImportado.getLanche().getDescricao());
+        assertEquals("Cola", pedidoImportado.getBebida());
+        assertEquals("Batata", pedidoImportado.getAcompanhamento());
+    }
+
+    @Test
+    public void testProxyRelatorioFaturamento() {
+        RelatorioHamburgueria proxyGerente = new ProxyRelatorio("GERENTE");
+        assertEquals("Faturamento do dia: R$ 5.430,00", proxyGerente.gerarRelatorioDiario());
+
+        RelatorioHamburgueria proxyCaixa = new ProxyRelatorio("CAIXA");
+        assertEquals("Acesso Negado: Apenas gerentes podem ver o faturamento.", proxyCaixa.gerarRelatorioDiario());
+    }
+
+    @Test
+    public void testFechamentoLojaFacade() {
+        FechamentoLojaFacade fechamento = new FechamentoLojaFacade();
+        String resultado = fechamento.encerrarExpediente();
+        assertEquals("Painel desligado. Chapa esfriando. Portas trancadas e alarme ativado.", resultado);
     }
 }

@@ -23,6 +23,7 @@ import org.example.comportamental.templatemethod.PreparoCarneTradicional;
 import org.example.comportamental.templatemethod.PreparoTemplate;
 import org.example.comportamental.templatemethod.PreparoVegano;
 import org.example.comportamental.visitor.*;
+import org.example.comportamental.interpreter.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -170,5 +171,17 @@ public class ComportamentalTest {
 
         assertEquals(1.50, hamburguer.aceitar(calculadora));
         assertEquals(1.50, refrigerante.aceitar(calculadora));
+    }
+
+    @Test
+    public void testInterpreterDescontosAcumulados() {
+        double valorPedido = 100.0;
+
+        ExpressaoPromocional dezReaisOff = new DescontoFixo(10.0);
+        ExpressaoPromocional vintePorcentoOff = new DescontoPercentual(20.0);
+
+        ExpressaoPromocional cupomBlackFriday = new AcumularDescontos(dezReaisOff, vintePorcentoOff);
+
+        assertEquals(72.0, cupomBlackFriday.aplicarDesconto(valorPedido));
     }
 }
